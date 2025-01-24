@@ -1,0 +1,17 @@
+{
+  "name": "playwright-test",
+  "version": "1.0.0",
+  "description": "A project to test playwright functionalities",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ammaar Nizam",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "allure-playwright": "^3.0.7"
+  }
+}
