@@ -4,6 +4,10 @@ import {
     checkNumberOfCompletedTodosInLocalStorage,
 } from "../utils/utils";
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("https://demo.playwright.dev/todomvc");
+});
+
 test.describe("Item", () => {
   test("should allow me to mark items as complete", async ({ page }) => {
     const newTodo = page.getByPlaceholder("What needs to be done?");

@@ -1,6 +1,10 @@
 import { createDefaultTodos } from "../utils/utils";
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("https://demo.playwright.dev/todomvc");
+});
+
 test.describe("Responsiveness", () => {
   test("should display correctly on mobile", async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });

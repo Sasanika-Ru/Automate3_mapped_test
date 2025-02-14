@@ -2,6 +2,10 @@ import { checkNumberOfCompletedTodosInLocalStorage } from "../utils/utils";
 import { test, expect } from "@playwright/test";
 import { TODO_ITEMS } from "./todo-items";
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("https://demo.playwright.dev/todomvc");
+});
+
 test.describe("Persistence", () => {
   test("should persist its data", async ({ page }) => {
     const newTodo = page.getByPlaceholder("What needs to be done?");

@@ -6,6 +6,10 @@ import {
 import { test, expect, type Page } from "@playwright/test";
 import { TODO_ITEMS } from "./todo-items";
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("https://demo.playwright.dev/todomvc");
+});
+
 test.describe("Routing", () => {
   test.beforeEach(async ({ page }) => {
     await createDefaultTodos(page);

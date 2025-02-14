@@ -4,6 +4,10 @@ import {
 import { test, expect } from "@playwright/test";
 import { TODO_ITEMS } from './todo-items';
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("https://demo.playwright.dev/todomvc");
+});
+
 test.describe("Clear completed button", () => {
   test.beforeEach(async ({ page }) => {
     await createDefaultTodos(page);

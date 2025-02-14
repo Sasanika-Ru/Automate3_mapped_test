@@ -5,6 +5,10 @@ import {
 } from "../utils/utils";
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("https://demo.playwright.dev/todomvc");
+});
+
 test.describe("Mark all as completed", () => {
   test.beforeEach(async ({ page }) => {
     await createDefaultTodos(page);
