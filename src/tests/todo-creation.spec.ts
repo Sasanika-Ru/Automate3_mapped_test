@@ -34,8 +34,8 @@ test.describe("New Todo", () => {
 
     await newTodo.fill(TODO_ITEMS[0]);
     await newTodo.press("Enter");
-
-    await expect(newTodo).toBeEmpty();
+    // Purposely fail: Expect input NOT to be empty
+    await expect(newTodo).not.toBeEmpty();
     await checkNumberOfTodosInLocalStorage(page, 1);
   });
 
