@@ -5,6 +5,11 @@ test.beforeEach(async ({ page }) => {
   await page.goto("https://demo.playwright.dev/todomvc");
 });
 
+
+console.log("Chore branch: Setup adjustments applied");
+
+
+
 test.describe("Accessibility", () => {
   test("should have no accessibility violations", async ({ page }) => {
     await createDefaultTodos(page);
