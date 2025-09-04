@@ -10,7 +10,8 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("New Todo", () => {
-  test("should allow me to add todo items", { tag: ['@T5919', 'T5920', 'T5921'] }, async ({ page }) => {
+test("should allow me to add todo items", { tag: ['@T5919', '@T5920', '@T5921'] }, async ({ page }) => {
+
     const newTodo = page.getByPlaceholder("What needs to be done?");
 
     await newTodo.fill(TODO_ITEMS[0]);
