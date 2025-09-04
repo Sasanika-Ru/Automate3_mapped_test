@@ -14,6 +14,8 @@ test.describe("Persistence", () => {
       await newTodo.fill(item);
       await newTodo.press("Enter");
     }
+    console.log("Chore branch: Setup adjustments applied");
+    console.log("Chore branch: Setup adjustments applied");
 
     const todoItems = page.getByTestId("todo-item");
     const firstTodoCheck = todoItems.nth(0).getByRole("checkbox");
