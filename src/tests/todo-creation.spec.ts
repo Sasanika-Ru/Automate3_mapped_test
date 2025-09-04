@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("New Todo", () => {
-test("should allow me to add todo items", { tag: ['@T5919', '@T5920', '@T5921'] }, async ({ page }) => {
+test("should allow me to add todo items", { tag: ['@T6085'] }, async ({ page }) => {
 
     const newTodo = page.getByPlaceholder("What needs to be done?");
 
@@ -28,7 +28,7 @@ test("should allow me to add todo items", { tag: ['@T5919', '@T5920', '@T5921'] 
     await checkNumberOfTodosInLocalStorage(page, 2);
   });
 
-  test("should clear text input field when an item is added", { tag: ['@T5986'] }, async ({
+  test("should clear text input field when an item is added", { tag: ['@T6083'] }, async ({
     page,
   }) => {
     const newTodo = page.getByPlaceholder("What needs to be done?");
@@ -40,7 +40,7 @@ test("should allow me to add todo items", { tag: ['@T5919', '@T5920', '@T5921'] 
     await checkNumberOfTodosInLocalStorage(page, 1);
   });
 
-  test("should append new items to the bottom of the list", { tag: ['@T6009'] }, async ({
+  test("should append new items to the bottom of the list", { tag: ['@T6084'] }, async ({
     page,
     browserName,
   }) => {
